@@ -22,7 +22,8 @@ Also a cheatsheet for the SYSC 3110 exam
 # MVC
 
 # Composite
-- 
+-  You want to represent part-whole hieararchies of objects
+-  You want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly.
 # Strategy
 
 # Template Method
