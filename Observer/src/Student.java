@@ -3,7 +3,6 @@ import java.util.Date;
 public class Student implements ProfListener {
 
     private  String name;
-    private Date midterm;
 
     public Student(String name){
         this.name = name;
@@ -17,14 +16,12 @@ public class Student implements ProfListener {
         this.name = name;
     }
 
-    public void party(Date date){
-        this.midterm = date;
-        System.out.println(name + " : Let's get lit fam since the midterm got pushed back to " +  this.midterm);
+    public void party(Date date, String prof){
+        System.out.println(name + " : " + prof + ", let's get lit fam since the midterm got pushed back to " +  date);
     }
 
-    public void study(Date date){
-        this.midterm = date;
-        System.out.println(name  + " : my funeral is on" + this.midterm);
+    public void study(Date date, String prof){
+        System.out.println(name  + " : " + prof  + ", you will end me on " + date);
     }
     /**
      *
@@ -32,11 +29,11 @@ public class Student implements ProfListener {
      */
     @Override
     public void midtermAnounced(CourseEvent e) {
-
+        study(e.getMidtermDate(), e.getProfName());
     }
 
     @Override
     public void midtermPostponed(CourseEvent e) {
-
+        party(e.getMidtermDate(), e.getProfName());
     }
 }

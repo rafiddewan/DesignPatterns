@@ -8,12 +8,12 @@ public class TA implements ProfListener {
         this.name = name;
     }
 
-    public void proctor(Date date){
-        System.out.println(name + " : Time to proctor on" + date);
+    public void proctor(Date date, String prof){
+        System.out.println(name + " : " + prof + ", it's time to proctor on" + date);
     }
 
-    public void relax(Date date){
-        System.out.println(name + "Time to relax since midterm got postsponed too" + date);
+    public void relax(Date date, String prof){
+        System.out.println(name + " : " + prof + ", it's time to relax since midterm got postsponed on " + date);
     }
     /**
      *
@@ -21,7 +21,7 @@ public class TA implements ProfListener {
      */
     @Override
     public void midtermAnounced(CourseEvent e) {
-
+        proctor(e.getMidtermDate(), e.getProfName());
     }
 
     /**
@@ -30,6 +30,6 @@ public class TA implements ProfListener {
      */
     @Override
     public void midtermPostponed(CourseEvent e) {
-
+        relax(e.getMidtermDate(), e.getProfName());
     }
 }

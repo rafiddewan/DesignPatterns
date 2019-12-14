@@ -8,12 +8,19 @@ public class CourseEvent extends EventObject {
     /**
      * Constructs a prototypical Event.
      *
-     * @param source The object on which the Event initially occurred.
-     * @throws IllegalArgumentException if source is null.
      */
-    public CourseEvent(Object source) {
-        super(source);
+    public CourseEvent(Date date, Prof prof) {
+        super(prof);
+        this.midtermDate = date;
     }
 
+    public Date getMidtermDate(){
+        return this.midtermDate;
+    }
+
+    public String getProfName(){
+        Prof p = (Prof) getSource();
+        return p.getName();
+    }
 
 }
