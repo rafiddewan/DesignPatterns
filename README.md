@@ -22,7 +22,7 @@ Also a cheatsheet for the SYSC 3110 exam
 # MVC
 
 # Composite
-
+- 
 # Strategy
 
 # Template Method
