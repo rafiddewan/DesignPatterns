@@ -22,8 +22,10 @@ Also a cheatsheet for the SYSC 3110 exam
 # MVC
 
 # Composite
--  You want to represent part-whole hieararchies of objects
--  You want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly.
+    -  You want to represent part-whole hieararchies of objects
+    -  You want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly.
+    -  Usually has a client that uses an abstract parent class with a child class one being the leaf and the other being a composite
+    -  Composite contains a list of it's parent sort of like a "branch"
 # Strategy
 
 # Template Method
