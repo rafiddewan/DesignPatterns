@@ -46,5 +46,7 @@ Also a cheatsheet for the SYSC 3110 exam
     - IsEmpty is a function for lists that can use the size() fucntion
     - size() function is abstract and won't be implemented till you make arrays
 # Decorator
-
-# Factory
+    - Encapsulates the orginal object inside an abstract wrapper interface
+    - Decorator objects and core boject inherit from abstract interface
+    - Attaches responsibilities to an object dynamically
+    - Designed to let you add responsiblities to objects without sublassing
