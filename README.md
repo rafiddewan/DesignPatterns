@@ -18,7 +18,7 @@ Also a cheatsheet for the SYSC 3110 exam
     - An event source can now encapsulate all relevant info in an event object that it sends to its event listeners
     - All listeners implement a common interface defined for the particular event
     - Event source maintains a  list of listeners
-    - When a change occurs, event source instantiates an event objec and sends it by iterating over the list of listeners invoking one of the methods defined in the lsitener interface
+    - When a change occurs, event source instantiates an event object and sends it by iterating over the list of listeners invoking one of the methods defined in the lsitener interface
 # MVC
     - Model
         - **Contents of application**
@@ -49,4 +49,4 @@ Also a cheatsheet for the SYSC 3110 exam
     - Encapsulates the orginal object inside an abstract wrapper interface
     - Decorator objects and core boject inherit from abstract interface
     - Attaches responsibilities to an object dynamically
-    - Designed to let you add responsiblities to objects without sublassing
+    - Designed to let you add responsiblities to objects without subclassing
